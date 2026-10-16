@@ -1,0 +1,187 @@
+{
+    "toy - treemix.gz - m 1, fixed seed": {
+        "content": [
+            [
+                [
+                    {
+                        "id": "toy"
+                    },
+                    "toy.llik:md5,30ee481a5a5b15a1b2443341e33e558f"
+                ]
+            ],
+            [
+                [
+                    {
+                        "id": "toy"
+                    },
+                    "toy.treeout.gz:md5,fe2750c9cc6e46358de6fbeb5c041322"
+                ]
+            ],
+            [
+                [
+                    "TREEMIX",
+                    "treemix",
+                    "1.13"
+                ]
+            ]
+        ],
+        "timestamp": "2026-10-16T18:23:14.207282",
+        "meta": {
+            "nf-test": "0.9.5",
+            "nextflow": "26.10.2"
+        }
+    },
+    "toy - stub": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.llik:md5,f47ac3c978a58f35fb3f9e2ad27ba71d"
+                    ]
+                ],
+                "1": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.treeout.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "2": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.vertices.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "3": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.edges.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "4": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.cov.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "5": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.modelcov.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "6": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.covse.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "7": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.log:md5,ad25992cd955ad55ad5fa9bf99c0f3ce"
+                    ]
+                ],
+                "8": [
+                    [
+                        "TREEMIX",
+                        "treemix",
+                        "1.13"
+                    ]
+                ],
+                "cov": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.cov.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "covse": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.covse.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "edges": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.edges.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "llik": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.llik:md5,f47ac3c978a58f35fb3f9e2ad27ba71d"
+                    ]
+                ],
+                "log": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.log:md5,ad25992cd955ad55ad5fa9bf99c0f3ce"
+                    ]
+                ],
+                "modelcov": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.modelcov.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "treeout": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.treeout.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ],
+                "versions_treemix": [
+                    [
+                        "TREEMIX",
+                        "treemix",
+                        "1.13"
+                    ]
+                ],
+                "vertices": [
+                    [
+                        {
+                            "id": "toy"
+                        },
+                        "toy.vertices.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                    ]
+                ]
+            }
+        ],
+        "timestamp": "2026-10-16T18:23:24.454063",
+        "meta": {
+            "nf-test": "0.9.5",
+            "nextflow": "26.10.2"
+        }
+    }
+}

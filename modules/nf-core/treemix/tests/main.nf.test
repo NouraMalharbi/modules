@@ -1,0 +1,85 @@
+nextflow_process {
+
+    name "Test Process TREEMIX"
+    script "../main.nf"
+    process "TREEMIX"
+    config "./nextflow.config"
+
+    tag "modules"
+    tag "modules_nfcore"
+    tag "treemix"
+
+    test("toy - treemix.gz - m 1, fixed seed") {
+        when {
+            process {
+                """
+                input[0] = channel.of([
+                    [ id:'toy' ],
+                    file("$baseDir/assets/test_data/toy.treemix.gz", checkIfExists: true),
+                    1,
+                    1234,
+                    []
+                ])
+                """
+            }
+        }
+        then {
+            assertAll(
+                { assert process.success },
+                { assert path(process.out.llik[0][1]).text.contains('Exiting ln(likelihood) with 1 migration events') },
+                { assert path(process.out.log[0][1]).text.contains('SEED: 1234') },
+                { assert snapshot(
+                    process.out.llik,
+                    process.out.treeout,
+                    process.out.versions_treemix
+                ).match() }
+            )
+        }
+    }
+
+    test("toy - treemix.gz - m 0, no seed") {
+        when {
+            process {
+                """
+                input[0] = channel.of([
+                    [ id:'toy_m0' ],
+                    file("$baseDir/assets/test_data/toy.treemix.gz", checkIfExists: true),
+                    0,
+                    null,
+                    []
+                ])
+                """
+            }
+        }
+        then {
+            assertAll(
+                { assert process.success },
+                { assert path(process.out.llik[0][1]).text.contains('with 0 migration events') },
+                { assert path(process.out.log[0][1]).text.contains('SEED:') }
+            )
+        }
+    }
+
+    test("toy - stub") {
+        options "-stub"
+        when {
+            process {
+                """
+                input[0] = channel.of([
+                    [ id:'toy' ],
+                    file("$baseDir/assets/test_data/toy.treemix.gz", checkIfExists: true),
+                    1,
+                    1234,
+                    []
+                ])
+                """
+            }
+        }
+        then {
+            assertAll(
+                { assert process.success },
+                { assert snapshot(process.out).match() }
+            )
+        }
+    }
+}
